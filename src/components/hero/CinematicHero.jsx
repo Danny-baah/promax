@@ -146,7 +146,7 @@ export function CinematicHero() {
 
         {/* SIDE STORYLINE NAVIGATION (Interactive Milestones) */}
         {!isReducedMotion && (
-          <aside className="storyline-timeline" aria-label="Story Progression">
+          <aside className="storyline-timeline" aria-label="Handlungsverlauf">
             <div className="timeline-rail">
               {STORY_STAGES.map((s) => {
                 const isActive = activeStage >= s.id;
@@ -157,7 +157,7 @@ export function CinematicHero() {
                     type="button"
                     onClick={() => scrollToMilestone(s.progress)}
                     className={`timeline-node ${isActive ? 'active' : ''} ${isCurrent ? 'current' : ''}`}
-                    title={`Jump to ${s.name}`}
+                    title={`Zu ${s.name} springen`}
                   >
                     <span className="node-marker" />
                     <span className="node-label">{s.name}</span>

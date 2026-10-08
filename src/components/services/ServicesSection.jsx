@@ -22,7 +22,7 @@ const SERVICES_DATA = [
   {
     id: '02',
     number: '02',
-    title: 'SMART HOME & AUTOMATION',
+    title: 'SMART HOME & AUTOMATISIERUNG',
     description: 'Intelligente Steuerung für mehr Komfort, Sicherheit und Effizienz.',
     image: '/services/service_02_smarthome.webp',
     imageAlt: 'Modernes Smart-Home-Bedienpanel im Wohnbereich',

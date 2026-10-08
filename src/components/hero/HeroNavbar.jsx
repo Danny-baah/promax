@@ -53,7 +53,7 @@ export const HeroNavbar = forwardRef(function HeroNavbar(
         {/* CENTER NAVIGATION */}
         <nav className="desktop-nav" aria-label="Hauptnavigation">
           <a href="#home" className="nav-link active">
-            HOME
+            STARTSEITE
             <span className="nav-active-pill" />
           </a>
           <a href="#services" className="nav-link">LEISTUNGEN</a>
@@ -83,7 +83,7 @@ export const HeroNavbar = forwardRef(function HeroNavbar(
       {/* MOBILE FLYOUT */}
       {mobileMenuOpen && (
         <div className="mobile-menu-drawer">
-          <a href="#home" onClick={() => setMobileMenuOpen(false)} className="mobile-link active">HOME</a>
+          <a href="#home" onClick={() => setMobileMenuOpen(false)} className="mobile-link active">STARTSEITE</a>
           <a href="#services" onClick={() => setMobileMenuOpen(false)} className="mobile-link">LEISTUNGEN</a>
           <a href="#work" onClick={() => setMobileMenuOpen(false)} className="mobile-link">UNSERE ARBEIT</a>
           <a href="#about" onClick={() => setMobileMenuOpen(false)} className="mobile-link">ÜBER UNS</a>

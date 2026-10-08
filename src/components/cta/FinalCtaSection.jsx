@@ -8,7 +8,7 @@ export function FinalCtaSection() {
       <div className="cta-backdrop-wrap desktop-only">
         <img
           src="/cta_villa_retina.webp"
-          alt="Modern Architectural Villa Illuminated at Twilight"
+          alt="Moderne Architekturvilla beleuchtet in der Dämmerung"
           className="cta-backdrop-img"
           loading="lazy"
         />

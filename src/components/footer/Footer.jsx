@@ -15,8 +15,8 @@ export function Footer() {
           </div>
 
           {/* Quick Nav Links */}
-          <nav className="footer-nav" aria-label="Footer Navigation">
-            <a href="#home" className="footer-nav-link">Home</a>
+          <nav className="footer-nav" aria-label="Fußzeilennavigation">
+            <a href="#home" className="footer-nav-link">Startseite</a>
             <a href="#services" className="footer-nav-link">Leistungen</a>
             <a href="#kontakt" className="footer-nav-link">Kontakt</a>
             <a href="#impressum" className="footer-nav-link">Impressum</a>
