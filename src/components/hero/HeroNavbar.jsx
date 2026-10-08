@@ -33,7 +33,7 @@ export const HeroNavbar = forwardRef(function HeroNavbar(
     >
       <div className="navbar-inner">
         {/* BRAND LOGO */}
-        <a href="#home" className="brand-logo" aria-label="Volterra Elektrotechnik">
+        <a href="#home" className="brand-logo" aria-label="Logo">
           <div className="brand-mark">
             <svg
               className="brand-lightning"
@@ -47,10 +47,7 @@ export const HeroNavbar = forwardRef(function HeroNavbar(
               />
             </svg>
           </div>
-          <div className="brand-text-col">
-            <span className="brand-name">VOLTERRA</span>
-            <span className="brand-subtitle">ELEKTROTECHNIK</span>
-          </div>
+          <span className="brand-name">LOGO</span>
         </a>
 
         {/* CENTER NAVIGATION */}
