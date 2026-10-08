@@ -1,0 +1,291 @@
+.cinematic-text-layer {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* Base text state container */
+.text-state {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.12s linear;
+  will-change: transform, opacity, filter;
+  max-width: 90vw;
+}
+
+/* NARRATIVE STATES 1–7 (LEFT ALIGNED, UNOBSTRUCTING CENTER CINEMATIC ACTION) */
+.text-state-narrative {
+  top: 22vh;
+  left: 7vw;
+  max-width: 520px;
+}
+
+/* Eyebrow Accent (Muted Coral / Terracotta) */
+.eyebrow-accent {
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #DE7356;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 16px rgba(222, 115, 86, 0.4);
+}
+
+.eyebrow-final {
+  letter-spacing: 0.22em;
+}
+
+/* Narrative Headline */
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  font-weight: 400; /* Refined architectural sans-serif, not heavy or chunky */
+  line-height: 1.14;
+  letter-spacing: -0.015em;
+  color: var(--text-pure);
+  text-shadow: 0 4px 28px rgba(0, 0, 0, 0.85);
+}
+
+/* Technical Mode variation for behind-the-wall state */
+.technical-mode .hero-headline {
+  letter-spacing: -0.01em;
+}
+
+.narrative-supporting {
+  margin-top: 1.25rem;
+  font-family: var(--font-sans);
+  font-size: clamp(0.92rem, 1.05vw, 1.05rem);
+  font-weight: 300;
+  line-height: 1.55;
+  color: rgba(245, 244, 239, 0.72);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8);
+  max-width: 440px;
+}
+
+/* ==================================================
+   FINAL HERO STATE — MATCHING REFERENCE IMAGE
+================================================== */
+.text-state-final {
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16vh 7vw 3.5vh 7vw;
+  box-sizing: border-box;
+}
+
+.final-hero-left {
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+}
+
+.final-main-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4vw, 4.1rem);
+  font-weight: 400; /* Refined clean architectural headline matching reference */
+  line-height: 1.12;
+  letter-spacing: -0.012em;
+  color: var(--text-pure);
+  margin-top: 0.35rem;
+  margin-bottom: 1.35rem;
+  text-shadow: 0 4px 28px rgba(0, 0, 0, 0.85);
+}
+
+.final-description {
+  font-family: var(--font-sans);
+  font-size: clamp(0.92rem, 1.05vw, 1.05rem);
+  font-weight: 300;
+  line-height: 1.62;
+  color: rgba(245, 244, 239, 0.76);
+  max-width: 460px;
+  margin-bottom: 2.2rem;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.85);
+}
+
+.final-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  pointer-events: auto;
+}
+
+/* Primary Coral CTA Button */
+.primary-coral-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.78rem 1.85rem;
+  border-radius: 9999px;
+  background: rgba(8, 17, 29, 0.5);
+  border: 1px solid rgba(222, 115, 86, 0.5);
+  color: var(--text-pure);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.primary-coral-cta:hover {
+  background: rgba(222, 115, 86, 0.16);
+  border-color: #DE7356;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5), 0 0 20px rgba(222, 115, 86, 0.3);
+  transform: translateY(-1px);
+}
+
+.cta-arrow-icon {
+  color: #DE7356;
+  transition: transform 0.25s ease;
+}
+
+.primary-coral-cta:hover .cta-arrow-icon {
+  transform: translateX(3px);
+  color: #ffffff;
+}
+
+/* Secondary Action Button */
+.secondary-action-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.78rem 1.4rem;
+  color: rgba(245, 244, 239, 0.78);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.secondary-action-btn:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* ==================================================
+   RESTRAINED FEATURE STRIP AT BOTTOM (REFERENCE SPEC)
+================================================== */
+.final-feature-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 1.25rem 0 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  pointer-events: auto;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex: 1;
+}
+
+.feature-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #DE7356;
+  flex-shrink: 0;
+}
+
+.feature-icon {
+  color: #DE7356;
+  stroke-width: 1.5;
+}
+
+.feature-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-title {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--text-pure);
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.feature-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: rgba(245, 244, 239, 0.52);
+  text-transform: uppercase;
+  margin-top: 3px;
+  line-height: 1.2;
+}
+
+.feature-separator {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 1.25rem;
+  flex-shrink: 0;
+}
+
+/* ==================================================
+   RESPONSIVE DESIGN (DESKTOP FIRST, MOBILE OPTIMIZED)
+================================================== */
+@media (max-width: 1024px) {
+  .final-feature-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem;
+    padding-top: 1rem;
+  }
+  .feature-separator {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-state-narrative {
+    top: 17vh;
+    left: 6vw;
+    right: 6vw;
+    max-width: 100%;
+  }
+
+  .text-state-final {
+    padding: 15vh 6vw 2.5vh 6vw;
+  }
+
+  .final-actions-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .final-feature-strip {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding-top: 0.85rem;
+  }
+
+  .final-main-headline {
+    font-size: 2.1rem;
+  }
+}

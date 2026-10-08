@@ -1,0 +1,30 @@
+.app-root {
+  position: relative;
+  width: 100%;
+  background: var(--bg-dark, #050b14);
+  overflow-x: hidden;
+}
+
+/* Ensure the hero stage remains permanently fixed and static in the background */
+/* Crucial: 'transform: none !important' prevents GSAP ScrollTrigger's unpin logic */
+/* from translating the hero downward at the end of the scroll range, eliminating the blank gap */
+.hero-pin {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  transform: none !important;
+  z-index: 1 !important;
+}
+
+/* Prevent pin spacer or container from occluding or translating the fixed hero stage */
+.pin-spacer {
+  transform: none !important;
+}
+
+.hero-scroll-container {
+  background: transparent !important;
+}
